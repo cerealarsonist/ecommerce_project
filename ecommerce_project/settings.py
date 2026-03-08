@@ -39,12 +39,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-x5-jel3+4c*&8r^q3h&(2p2syd@0!9ssi9v#*nr$ph6f8m7b$!'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+SECRET_KEY = os.getenv('%um9$j_fcm%3e%r#5(bm+o%df75avank4(f(p0xfg^4gr(eo@c','fallback_dev_secret')
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
+OPENAI_KEY = os.getenv('OPENAI_KEY')
+MONGO_URI = os.getenv('mongodb+srv://storeadmin:admin12345@cluster0.e4wvlf0.mongodb.net/?appName=Cluster0')
+        
 # Application definition
 
 INSTALLED_APPS = [
