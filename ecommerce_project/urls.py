@@ -21,3 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('store.urls')),
 ]
+
+from django.http import HttpResponse
+
+urlpatterns += [
+    path('favicon.ico', lambda request: HttpResponse(status=204)),  # 204 = No Content
+]
