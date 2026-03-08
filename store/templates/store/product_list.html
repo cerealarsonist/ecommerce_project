@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Product List</title>
+</head>
+<body>
+
+<h1>Product List</h1>
+
+<ul>
+{% for product in products %}
+    <li>
+        <strong>{{ product.name }} - ${{ product.price }}</strong><br>
+        {{ product.description }}<br>
+        Category: {{ product.category }}<br>
+        Price: ${{ product.price }}<br>
+        Tags: {{ product.tags }}
+    </li>
+{% endfor %}
+</ul>
+
+<h2>All Products</h2>
+
+<ul>
+{% for product in products %}
+    <li>
+        <strong>{{ product.name }} - ${{ product.price }}</strong><br>
+    </li>
+{% endfor %}
+</ul>
+
+<a href="/add/">Add Product</a>
+
+<h2>Recommended Products</h2>
+
+<ul>
+{% for product in recommended %}
+    <li>{{ product.name }} - ${{ product.price }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
