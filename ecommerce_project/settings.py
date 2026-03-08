@@ -41,7 +41,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-x5-jel3+4c*&8r^q3h&(2p2syd
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-project-isit.onrender.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'ecommerce-project-isit.onrender.com']
 
 OPENAI_KEY = os.getenv('OPENAI_KEY')
 MONGO_URI = os.getenv('mongodb+srv://storeadmin:admin12345@cluster0.e4wvlf0.mongodb.net/?appName=Cluster0')
